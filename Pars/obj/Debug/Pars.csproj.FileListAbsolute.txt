@@ -1,0 +1,7 @@
+D:\Pars\Pars\bin\Debug\Pars.exe.config
+D:\Pars\Pars\bin\Debug\Pars.exe
+D:\Pars\Pars\bin\Debug\Pars.pdb
+D:\Pars\Pars\obj\Debug\Pars.csproj.CoreCompileInputs.cache
+D:\Pars\Pars\obj\Debug\Pars.exe
+D:\Pars\Pars\obj\Debug\Pars.pdb
+D:\pars\Pars\obj\Debug\Pars.csprojResolveAssemblyReference.cache
