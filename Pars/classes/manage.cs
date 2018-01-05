@@ -2,13 +2,34 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Pars.classes
 {
     class Manage
     {
-        public string Path { get; set; }
+        Regex pattern = new Regex("[0-9]");
+        public string path;
+        public string Path
+        {
+            get
+            {
+                return path;
+            }
+            set
+            {
+                if (pattern.IsMatch(Path))
+                {
+                    Console.WriteLine("Путь не может начинаться с цифры");
+                    path = null;
+                }
+                else
+                {
+                    path = value;
+                }
+            }
+        }
 
         private void Sort()
         {
@@ -18,7 +39,7 @@ namespace Pars.classes
         {
 
         }
-        public void Enter(string fileName)
+        public void Enter()
         {
             Console.WriteLine("Для ввода доменов через файл нажмите 1");
             Console.WriteLine("Для ввода доменов вручную нажмите 2");
@@ -26,14 +47,17 @@ namespace Pars.classes
             Console.WriteLine();
             if (read == 1)
             {
+               
+                Console.WriteLine("Введите путь");
+                path = "../../testArray.txt";
                 classes.Files file = new classes.Files();
-                file.StreamDomain(fileName);
+                file.StreamDomain(Path);
             }
             else
             {
                 if (read == 2) 
                 {
-                    Console.WriteLine("ручной");
+                    Console.WriteLine("ручной'ввод");
                     Console.WriteLine("'0' для завершения");
                     string line;
                     bool a = true;
@@ -48,25 +72,9 @@ namespace Pars.classes
                         {
                             Strings.arrDomain.Add(line);
                         }
-
                     }
-                    
                 }
             }
-
-            
         }
-
-        private static void Print(string s)
-        {
-            Console.WriteLine(s);
-        }
-        public void Conc(List<string> arr)
-        {
-            Strings.arrDomain.ForEach(Print);
-            
-        }
-        
-
     }
 }

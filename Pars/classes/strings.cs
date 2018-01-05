@@ -15,9 +15,26 @@ namespace Pars.classes
 
         }
 
-        public bool Correct(String a)
+        public void Correct()
         {
-            return true;
+            string pattern = "http://";
+            List<string> arr = new List<string>();
+            foreach (string elm in arrDomain)
+            {
+                if (elm.StartsWith(pattern))
+                {
+                    arr.Add(elm);
+                } else
+                {
+                    arr.Add(pattern + elm);
+                }
+            }
+            
+            arrDomain = arr;
+            foreach (string elm in arrDomain)
+            {
+                Console.WriteLine(elm);
+            }
         }
     }
 }

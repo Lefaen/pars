@@ -13,8 +13,10 @@ namespace Pars
         static void Main(string[] args)
         {
             classes.Manage manage = new classes.Manage();
-            manage.Enter("../../testArray.txt");
-            manage.Conc(classes.Strings.arrDomain);
+            classes.Strings st = new classes.Strings();
+            //manage.Enter();
+            classes.Download Connect = new classes.Download();
+            Connect.Connect("http://mycsharp.ru");
 
             Console.WriteLine();
             Console.WriteLine("press key for exit");
