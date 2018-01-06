@@ -16,7 +16,16 @@ namespace Pars
             classes.Strings st = new classes.Strings();
             //manage.Enter();
             classes.Download Connect = new classes.Download();
-            Connect.Connect("http://mycsharp.ru");
+            //Connect.Connect("http://mycsharp.ru");
+            classes.Files file = new classes.Files();
+            file.StreamDomain("../../testHref.txt");
+            foreach (string elm in classes.Strings.href)
+            {
+                st.InitHef(elm);
+            }
+
+
+
 
             Console.WriteLine();
             Console.WriteLine("press key for exit");

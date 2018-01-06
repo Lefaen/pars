@@ -13,11 +13,12 @@ namespace Pars.classes
         {
             try
             {
-                StreamReader fileDomain = new StreamReader(name);
+                StreamReader fileDomain = new StreamReader(name,Encoding.UTF8);
                 string stringFile;
                 while ((stringFile = fileDomain.ReadLine()) != null)
+                    
                 {
-                    Strings.arrDomain.Add(stringFile);
+                    Strings.href.Add(stringFile);//href -> domain
                 }
                 classes.Strings st = new classes.Strings();
                 st.Correct();
