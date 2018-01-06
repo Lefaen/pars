@@ -14,15 +14,20 @@ namespace Pars
         {
             classes.Manage manage = new classes.Manage();
             classes.Strings st = new classes.Strings();
-            //manage.Enter();
             classes.Download Connect = new classes.Download();
-            //Connect.Connect("http://mycsharp.ru");
-            classes.Files file = new classes.Files();
-            file.StreamDomain("../../testHref.txt");
-            foreach (string elm in classes.Strings.href)
-            {
-                st.InitHef(elm);
-            }
+
+            //manage.Enter();
+            
+            Connect.Connect("http://mycsharp.ru/");
+            
+            
+            
+            //classes.Files file = new classes.Files();
+            //file.StreamDomain("../../testHref.txt");
+            //foreach (string elm in classes.Strings.href)
+          //  {
+            //    st.InitHef(elm);
+            //}
 
 
 

@@ -12,7 +12,7 @@ namespace Pars.classes
         public static List<string> arrDomain = new List<string>();
         public static List<string> href = new List<string>();
 
-        public void InitHef(string txt)
+        public static void InitHref(string txt)
         {
             Match m;
             try
@@ -26,9 +26,10 @@ namespace Pars.classes
                     //Console.WriteLine("Found href " + m.Groups[1] + " at " + m.Groups[1].Index);
                     arr.Add(m.Groups[1].ToString());
                     m = m.NextMatch();
+                    href = Correct(arr);
                 }
  
-                foreach(string elm in arr)
+                foreach(string elm in href)
                 {
                     Console.WriteLine(elm);
                 }
@@ -36,30 +37,27 @@ namespace Pars.classes
             }
             catch(Exception e)
             {
-                //Console.WriteLine(e.Message);
+                Console.WriteLine(e.Message);
             }
         }
 
-        public void Correct()
+        public static List<string> Correct(List<string> array)
         {
             string pattern = "http://";
             List<string> arr = new List<string>();
-            foreach (string elm in arrDomain)
+            foreach (string elm in array)
             {
                 if (elm.StartsWith(pattern))
                 {
-                    //arr.Add(elm);
+                    arr.Add(elm);
                 } else
                 {
-                    //arr.Add(pattern + elm);
+                    arr.Add(pattern + elm);
                 }
             }
             
-            //arrDomain = arr;
-            foreach (string elm in href)//href->domain
-            {
-                //Console.WriteLine(elm);
-            }
+            array = arr;
+            return array;
         }
     }
 }

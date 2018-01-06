@@ -18,10 +18,10 @@ namespace Pars.classes
                 while ((stringFile = fileDomain.ReadLine()) != null)
                     
                 {
-                    Strings.href.Add(stringFile);//href -> domain
+                    Strings.arrDomain.Add(stringFile);
                 }
                 classes.Strings st = new classes.Strings();
-                st.Correct();
+                classes.Strings.Correct(classes.Strings.arrDomain);
             }
             catch(Exception e)
             {

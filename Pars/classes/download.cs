@@ -16,7 +16,7 @@ namespace Pars.classes
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
             StreamReader reader = new StreamReader(response.GetResponseStream());
-            Console.WriteLine(reader.ReadToEnd());
+            Strings.InitHref(reader.ReadToEnd());
         }
     }
 }
