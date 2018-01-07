@@ -1,6 +1,1 @@
-﻿webmaster.yandex.ru
-http://mail.ru
-gmail.com
-www.rambler.ru
-google.com
-yandex.ru
+﻿mycsharp.ru

@@ -49,7 +49,7 @@ namespace Pars.classes
             {
                
                 Console.WriteLine("Введите путь");
-                path = "../../testArray.txt";
+                path = "../../testArray.txt";               //test path
                 classes.Files file = new classes.Files();
                 file.StreamDomain(Path);
             }
@@ -70,10 +70,17 @@ namespace Pars.classes
                         }
                         else
                         {
-                            Strings.arrDomain.Add(line);
+                            Program.arrDomain.Add(line);
                         }
                     }
                 }
+            }
+        }
+        public void View(List<string> arr)
+        {
+            foreach(string elm in arr)
+            {
+                Console.WriteLine(elm);
             }
         }
     }

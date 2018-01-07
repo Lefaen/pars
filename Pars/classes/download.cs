@@ -10,13 +10,15 @@ namespace Pars.classes
 {
     class Download
     {
-        public void Connect(string uri)
+        public static StreamReader Connect(string uri)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
             StreamReader reader = new StreamReader(response.GetResponseStream());
-            Strings.InitHref(reader.ReadToEnd());
+            return reader;
+            
+            //Strings.InitHref(reader.ReadToEnd());
         }
     }
 }
