@@ -9,13 +9,6 @@ namespace Pars.classes
 {
     class Manage
     {
-        Regex pattern = new Regex("[0-9]");
-        
-
-        private void Sort()
-        {
-
-        }
         public void Rec()
         {
             Console.WriteLine("Введите путь для сохранения фалов");
@@ -55,6 +48,7 @@ namespace Pars.classes
                         if ((line = Convert.ToString(Console.ReadLine())) == "0")
                         {
                             Console.WriteLine("Был введен 0");
+                            a = false;
                             break;
                         }
                         else

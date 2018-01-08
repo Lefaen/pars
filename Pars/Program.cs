@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+//using System.Threading.Tasks;
 
 namespace Pars
 {
@@ -28,7 +29,7 @@ namespace Pars
             arrDomain = classes.Strings.Correct(arrDomain, "http://");      //коррекция имени
             manage.Rec();
             //manage.View(arrDomain);
-
+            
             foreach (string elm in arrDomain)
             {
 

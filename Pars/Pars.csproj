@@ -55,7 +55,6 @@
   <ItemGroup>
     <Content Include="readme.txt" />
     <Content Include="testArray.txt" />
-    <Content Include="testHref.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
