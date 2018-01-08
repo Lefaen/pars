@@ -20,17 +20,40 @@ namespace Pars.classes
                 {
                     Program.arrDomain.Add(stringFile);
                 }
-                //classes.Strings st = new classes.Strings();
-                //classes.Strings.Correct(classes.Strings.arrDomain);
                 fileDomain.Close();
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Введите путь еще раз");
+                Program.path = "../../testArray.txt";               //test path
+                Program.path = Console.ReadLine();
+                classes.Files file = new classes.Files();
+                file.StreamDomain(Program.path);
+            }
+        }
+
+
+        public void WriteFile(string path, string name, string txt)
+        {
+            try
+            {
+                if(!File.Exists(path + name + ".txt"))
+                {
+                    FileStream file = new FileStream(path + name + ".txt", FileMode.Create);
+                    StreamWriter writer = new StreamWriter(file);
+                    writer.Write(txt);
+                    writer.Close();
+                }
+
+
             }
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
             }
-            
-            
         }
+
+
             
     }
 }

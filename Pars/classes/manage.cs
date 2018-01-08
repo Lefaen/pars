@@ -10,48 +10,37 @@ namespace Pars.classes
     class Manage
     {
         Regex pattern = new Regex("[0-9]");
-        public string path;
-        public string Path
-        {
-            get
-            {
-                return path;
-            }
-            set
-            {
-                if (pattern.IsMatch(Path))
-                {
-                    Console.WriteLine("Путь не может начинаться с цифры");
-                    path = null;
-                }
-                else
-                {
-                    path = value;
-                }
-            }
-        }
+        
 
         private void Sort()
         {
 
         }
-        private void Rec()
+        public void Rec()
         {
-
+            Console.WriteLine("Введите путь для сохранения фалов");
+            //Program.pathSave = Console.ReadLine();
+            //Files.WriteFile(Program.pathSave);
         }
         public void Enter()
         {
+
             Console.WriteLine("Для ввода доменов через файл нажмите 1");
             Console.WriteLine("Для ввода доменов вручную нажмите 2");
+
+            
+
             int read = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
             if (read == 1)
             {
-               
-                Console.WriteLine("Введите путь");
-                path = "../../testArray.txt";               //test path
+                Console.WriteLine("Введите путь для считывания доменнов из файла");
+                Program.path = "../../testArray.txt";               //test path
+                //Program.path = Console.ReadLine();
                 classes.Files file = new classes.Files();
-                file.StreamDomain(Path);
+                file.StreamDomain(Program.path);
+                
+                
             }
             else
             {

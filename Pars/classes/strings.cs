@@ -65,6 +65,21 @@ namespace Pars.classes
             }
             return arr;
         }
+        public static string Correct(string name)
+        {
+            string value = null;
+
+            if (name.StartsWith("http://", StringComparison.OrdinalIgnoreCase))
+            {
+                value = name.Replace("http://","");
+                value = value.Replace("/", "_");
+                value = value.Replace(":","_");
+                value = value.Replace("?", "_");
+            }
+
+
+            return value;
+        }
 
 
     }
