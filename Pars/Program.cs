@@ -12,7 +12,7 @@ namespace Pars
     {
         public static List<string> arrDomain = new List<string>();
         public static List<string> href = new List<string>();
-        public static List<string> domainHref = new List<string>();
+        //public static List<string> domainHref = new List<string>();
         public static string path;
         public static string pathSave;
 

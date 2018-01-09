@@ -25,7 +25,7 @@ namespace Pars.classes
             catch(Exception e)
             {
                 Console.WriteLine("Введите путь еще раз");
-                Program.path = "../../testArray.txt";               //test path
+                //Program.path = "../../testArray.txt";               //test path
                 Program.path = Console.ReadLine();
                 classes.Files file = new classes.Files();
                 file.StreamDomain(Program.path);
