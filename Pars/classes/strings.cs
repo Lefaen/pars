@@ -25,7 +25,6 @@ namespace Pars.classes
                     //Console.WriteLine("Found href " + m.Groups[1] + " at " + m.Groups[1].Index);
                     arr.Add(m.Groups[1].ToString());
                     m = m.NextMatch();
-                    //Program.href = Correct(arr, "http://");
                     
                 }
                 return arr;
@@ -71,6 +70,7 @@ namespace Pars.classes
 
             if (name.StartsWith("http://", StringComparison.OrdinalIgnoreCase))
             {
+
                 value = name.Replace("http://","");
                 value = value.Replace("/", "_");
                 value = value.Replace(":","_");
